@@ -1,0 +1,82 @@
+/* 主体部分是浏览器找到body标签后触发以下5个效果 */
+body {
+    font-family: 'Times New Roman'; /* 设置字体为Arial */
+    background-color: #e36f85; /* 设置背景颜色为浅灰色 */
+    color: #003c75; /* 设置文本颜色为深灰色 */
+    margin: 0; /* 页面外边距设为0，也就是本行与上下行之间距离 */
+    padding: 20px; /* 页面内边距设为20像素，也就是左边界距离左起第一个字符串距离 */
+}
+
+/* 标题h1样式触发以下2个效果 */
+h1 {
+    color: #afd0f2; /* 设置标题文字颜色为深蓝色 */
+    text-align: center; /* 将标题文本居中对齐 */
+}
+
+/* 表单样式当浏览器发现form标签触发以下6个效果 */
+form {
+    background-color: #ffffff; /* 设置表单背景为白色 */
+    padding: 15px; /* 表单内边距设为20像素 */
+    border-radius: 6px; /* 设置表单的四个角不再是90度，而是圆角且半径为8像素 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 设置表单边界的阴影效果 */
+    max-width: 450px; /* 设置表单的最大宽度为500像素 */
+    margin: 0 auto; /* 使表单居中显示 */
+}
+
+/* 表单内段落样式，对应课本168页的后代选择器，当且仅当p是form的子标签情形时触发以下2个效果 */
+form p {
+    /* font-weight: bold; 设置段落文字为粗体 */
+    font-style: italic;
+    margin-top: 10px; /* 段落的上边距设为10像素 */
+}
+
+/* 输入框和选择框样式，对应课本169页的并集选择器，用三个逗号隔开以下四个标签，使这四个标签均会触发以下6个效果 */
+input[type="text"],
+input[type="password"],
+select, 
+textarea {
+    width: 80%; /* 设置宽度为100% */
+    padding: 10px; /* 设置内边距为10像素 */
+    margin-top: 10px; /* 设置上边距为5像素 */
+    margin-bottom: 10px; /* 设置下边距为15像素 */
+    border: 1px solid #ccc; /* 设置边框为浅灰色 */
+    border-radius: 3px; /* 设置圆角半径为4像素 */
+}
+
+/* 单选按钮和复选框样式 单选按钮和复选框会触发以下1个效果*/
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px; /* 设置右边距为5像素，以便与标签分隔 */
+}
+
+/* 提交和重置按钮样式 同上，提交和重置按钮会触发以下5个效果*/
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 20px; /* 设置按钮的内边距为10像素（上下）和20像素（左右） */
+    margin-right: 10px; /* 设置右边距为10像素 */
+    /* border: none; 去除按钮的边框 这个在极个别浏览器不明显 */
+    border-radius: 4px; /* 设置按钮的四个角不再是直角 而是圆角半径为4像素 */
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+}
+
+/* 提交按钮样式 提交按钮不光上述5个效果，再加上以下2个效果*/
+input[type="submit"] {
+    background-color: #fec13f; /* 设置提交按钮的背景颜色为纯绿色 */
+    color: #fff; /* 设置文字颜色为白色 */
+}
+
+/* 重置按钮样式 提交按钮不光上述5个效果，再加上以下2个效果*/
+input[type="reset"] {
+    background-color: #84bb9f; /* 设置重置按钮的背景颜色为纯红色 */
+    color: #fff; /* 设置文字颜色为白色 */
+}
+
+/* 提交按钮悬停样式 需要和鼠标所处位置一起才会触发 参考171页表4-1的第五条*/
+input[type="submit"]:hover {
+    background-color: #ff7710; /* 当鼠标悬停时，改变提交按钮的背景颜色为纯蓝色 */
+}
+
+/* 重置按钮悬停样式 参考171页表4-1的第五条*/
+input[type="reset"]:hover {
+    background-color: #018081; /* 当鼠标悬停时，改变重置按钮的背景颜色为均衡色 */
+}
